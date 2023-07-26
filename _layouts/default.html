@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>{{ page.title }}</title>
+
+		<!-- styles -->
+		<link rel="stylesheet" href="{{site.baseurl}}/assets/css/uw-style.css">
+		<link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css">
+	</head>
+	<body>
+		<script>
+			$(document).ready(() => {
+				$('.lightbox').each(function(index, item) {
+					$(item).fancybox({
+						'padding': 0,
+						'margin': 20,
+						'openEffect': 'elastic',
+						'closeEffect': 'elastic',
+						'wrapCSS': $(item).attr('class').replace('lightbox', ''),
+
+						// callbacks
+						//
+						afterShow: function() {
+							this.wrap.draggable();
+							this.wrap.closest('.fancybox-overlay').css({
+								'overflow-x': 'hidden',
+								'overflow-y': 'hidden'
+							});
+						}
+					});	
+				});
+			});
+		</script>
+
+		{{ content }}
+	</body>
+</html>

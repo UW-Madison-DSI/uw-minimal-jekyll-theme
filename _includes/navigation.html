@@ -1,0 +1,22 @@
+
+<nav class="navbar navbar-expand-md">
+	<div class="container">
+		<a class="navbar-brand brand" href="{{site.baseurl}}/">
+			<span class="d-none d-sm-inline">University of Wisconsin</span>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon">
+				<i class="fa fa-bars"></i>
+			</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+			{% for item in site.data.navigation %}
+			<li class="nav-item">
+				<a class="nav-link{% if page.url == item.link %} active{% endif %}" href="{{site.baseurl}}{{ item.link }}">{{ item.name }}</a>
+			</li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+</nav>

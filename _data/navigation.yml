@@ -1,0 +1,8 @@
+- name: Nav1
+  link: /nav1.html
+
+- name: Nav2
+  link: /nav2.html
+
+- name: Nav3
+  link: /nav3.html

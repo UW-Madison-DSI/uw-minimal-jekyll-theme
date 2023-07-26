@@ -1,0 +1,3 @@
+define([], {
+	server: "https://localhost"
+});
