@@ -1,2 +1,6 @@
 .DS_Store
 .jekyll-cache
+.ipynb_checkpoints/
+.jupyter/
+_site
+
